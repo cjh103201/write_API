@@ -26,7 +26,7 @@ def write_api(request) :
         sentence = data["sentence"]
 
         #입력된 문장 평가 진행!
-        
+
 
 
         #output
