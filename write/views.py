@@ -28,7 +28,6 @@ def write_api(request) :
         #입력된 문장 평가 진행!
 
 
-
         #output
         score = 90
         evaluation = "상"
