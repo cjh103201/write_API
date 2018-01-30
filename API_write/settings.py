@@ -25,7 +25,7 @@ SECRET_KEY = 'rk!c^@-1m%nltrpy94g=v+03#m%v%brm(9d1sb7e0@8()l%on%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'deepwriteapi.azurewebsites.net']
 
 
 # Application definition
