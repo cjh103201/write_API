@@ -25,6 +25,7 @@ def write_api(request) :
         data = JSONParser().parse(request)
         sentence = data["sentence"]
 
+        #########################################################
         #입력된 문장 평가 진행!
 
 
@@ -37,8 +38,22 @@ def write_api(request) :
         }
         dump = json.dumps(result, ensure_ascii=False)
         return JSONResponse(dump, content_type="application/json")
+
     elif request.method == 'GET' :
-        return HttpResponse("hello!!")
+        #보내는 형태 : api/write?sentence=data
+        # get으로 입력받은 데이터 = sentence
+        sentence = request.GET.get("sentence")
+        print(sentence)
+
+        score = 60
+        evaluation = "하"
+        result = {
+            "score": score,
+            "evaluation": evaluation
+        }
+        dump = json.dumps(result, ensure_ascii=False)
+        return JSONResponse(dump, content_type="application/json")
+
 
 
 

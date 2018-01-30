@@ -18,5 +18,5 @@ from write import views
 
 urlpatterns = [
     url(r'^api/write/', views.write_api),
-    url(r'^api/write/(?P<sentence>[A-Za-z0-9]+)/$', views.get_write),
+    url(r'^api/getWrite/(?P<sentence>[A-Za-z0-9]+)/$', views.get_write),
 ]
