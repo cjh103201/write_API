@@ -38,7 +38,7 @@ def write_api(request) :
         dump = json.dumps(result, ensure_ascii=False)
         return JSONResponse(dump, content_type="application/json")
     elif request.method == 'GET' :
-        return HttpResponse("hello!")
+        pass
 
 
 
