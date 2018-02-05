@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
+from SentenceEvaluationAPI import Evaluator
 import json
 
 # Create your views here.
@@ -55,8 +56,6 @@ def write_api(request) :
         return JSONResponse(dump, content_type="application/json")
 
 
-
-
 """
 get 방식으로 문장을 입력받아, 점수와 상/중/하 결과 반환
 """
@@ -72,3 +71,42 @@ def get_write(request, sentence) :
     }
     dump = json.dumps(result, ensure_ascii=False)
     return JSONResponse(dump, content_type="application/json")
+
+
+@csrf_exempt
+def write_api_temp(request) :
+    if request.method == 'POST' :
+        # input
+        data = JSONParser().parse(request)
+        sentence = data["sentence"]
+
+        #########################################################
+        #입력된 문장 평가 진행!
+        scr, bi = Evaluator.sent_eval_api(sentence, './mdl')
+        #output
+        print(sentence)
+        print(scr, bi)
+        result = {
+            "score" : scr,
+            "bi" : bi
+        }
+        dump = json.dumps(result, ensure_ascii=False)
+        return JSONResponse(dump, content_type="application/json")
+
+    elif request.method == 'GET' :
+        #보내는 형태 : api/write?sentence=data
+        # get으로 입력받은 데이터 = sentence
+        sentence = request.GET.get("sentence")
+        print(sentence)
+        #########################################################
+        #입력된 문장 평가 진행! 
+        scr, bi = Evaluator.sent_eval_api(sentence, './mdl')
+        #output
+        print(sentence)
+        print(scr, bi)
+        result = {
+            "score" : scr,
+            "bi" : bi
+        }
+        dump = json.dumps(result, ensure_ascii=False)
+        return JSONResponse(dump, content_type="application/json")
