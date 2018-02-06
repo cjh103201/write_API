@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="918bcbd4-aa71-41b1-a943-96f94a92bcb2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/BasicOperator.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/BiGramFrequency.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/DataPipeline.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/Evaluator.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/FakeHangeulGenerator.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/ModelTrainer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/Parameters.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/VectorEmbedding.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/mdl/DistributionPickle.bin" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/mdl/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/mdl/model.ckpt.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/mdl/model.ckpt.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/mdl/model.ckpt.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/write/SentenceEvaluationAPI/parameters/Hangeul.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write/views.py" afterPath="$PROJECT_DIR$/write/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,20 +34,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/write/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,8 +73,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2126" />
-    <option name="y" value="-15" />
+    <option name="x" value="-1934" />
+    <option name="y" value="-24" />
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
@@ -103,6 +106,12 @@
               <item name="write_API" type="b2602c69:ProjectViewProjectNode" />
               <item name="write_API" type="462c0819:PsiDirectoryNode" />
               <item name="write" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="write_API" type="b2602c69:ProjectViewProjectNode" />
+              <item name="write_API" type="462c0819:PsiDirectoryNode" />
+              <item name="write" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -301,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1517818510651</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add deploy file">
+      <created>1517818527382</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1517818527382</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -309,9 +325,9 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20613563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38289204" sideWeight="0.5048439" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892057" sideWeight="0.5043057" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952183" sideWeight="0.4978328" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32892057" sideWeight="0.4956943" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38289204" sideWeight="0.49515608" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -504,8 +520,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/write/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="551">
+          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

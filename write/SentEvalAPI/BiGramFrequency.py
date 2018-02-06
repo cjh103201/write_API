@@ -2,8 +2,8 @@ import os
 import random
 from collections import defaultdict
 import pickle
-import BasicOperator
-from Parameters import Parameters
+import SentEvalAPI.BasicOperator
+from SentEvalAPI.Parameters import Parameters
 
 class FreqDistExtractor:
     def __init__(self):

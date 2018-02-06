@@ -1,5 +1,5 @@
 import pymysql
-from Parameters import Parameters
+from SentEvalAPI.Parameters import Parameters
 
 class DataPipe:
     '''

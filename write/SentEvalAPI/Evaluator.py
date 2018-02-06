@@ -1,8 +1,8 @@
 import tensorflow as tf
-import ModelTrainer as mt
-import DataPipeline
-from VectorEmbedding import HangeulBiVector
-from BasicOperator import BasicHangeulOperators
+import SentEvalAPI.ModelTrainer as mt
+import SentEvalAPI.DataPipeline
+from SentEvalAPI.VectorEmbedding import HangeulBiVector
+from SentEvalAPI.BasicOperator import BasicHangeulOperators
 
 class FreqDistribution:
     pass # 피클파일 부르는 것 때문에 만든 abstract class입니다. 쓰지마세영

@@ -4,9 +4,9 @@ import time
 import math
 import numpy as np
 import tensorflow as tf
-from Parameters import Parameters
-from VectorEmbedding import VectorFactory
-from BasicOperator import BasicOperators
+from SentEvalAPI.Parameters import Parameters
+from SentEvalAPI.VectorEmbedding import VectorFactory
+from SentEvalAPI.BasicOperator import BasicOperators
 
 ###################
 batchSize = 1024

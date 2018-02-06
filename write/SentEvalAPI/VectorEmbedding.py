@@ -1,9 +1,9 @@
 import random
-import FakeHangeulGenerator
-from Parameters import Parameters
-from BasicOperator import *
-from BiGramFrequency import FreqDistExtractor
-from BiGramFrequency import weightedMerge
+import SentEvalAPI.FakeHangeulGenerator
+from SentEvalAPI.Parameters import Parameters
+from SentEvalAPI.BasicOperator import *
+from SentEvalAPI.BiGramFrequency import FreqDistExtractor
+from SentEvalAPI.BiGramFrequency import weightedMerge
 
 class FreqDistribution:
     pass # 피클파일 부르는 것 때문에 만든 abstract class입니다. 쓰지마세영

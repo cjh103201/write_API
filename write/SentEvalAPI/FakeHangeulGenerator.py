@@ -1,10 +1,10 @@
 # LoveInMotion
 import random
-from BasicOperator import BasicHangeulOperators
-from BasicOperator import NGramVectorSeed
-from BiGramFrequency import FreqDistExtractor
-from BiGramFrequency import weightedMerge
-from Parameters import Parameters
+from SentEvalAPI.BasicOperator import BasicHangeulOperators
+from SentEvalAPI.BasicOperator import NGramVectorSeed
+from SentEvalAPI.BiGramFrequency import FreqDistExtractor
+from SentEvalAPI.BiGramFrequency import weightedMerge
+from SentEvalAPI.Parameters import Parameters
 
 class FreqDistribution:
     pass # 피클파일 부르는 것 때문에 만든 abstract class입니다. 쓰지마세영

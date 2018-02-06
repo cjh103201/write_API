@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
-from SentenceEvaluationAPI import Evaluator
+from SentEvalAPI import Evaluator
 import json
 
 # Create your views here.
