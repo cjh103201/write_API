@@ -17,6 +17,6 @@ from django.conf.urls import url, include
 from write import views
 
 urlpatterns = [
-    url(r'^api/write/', views.write_api),
+    url(r'^api/write/', views.write_api_temp),
     url(r'^api/getWrite/(?P<sentence>[A-Za-z0-9]+)/$', views.get_write),
 ]
