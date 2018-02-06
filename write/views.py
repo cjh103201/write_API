@@ -9,7 +9,7 @@ import sys
 sentAPIPath = 'D:\\home\\site\\wwwroot\\write\\SentEvalAPI'
 if sentAPIPath not in sys.path:
     sys.path.append(sentAPIPath)
-from SentEvalAPI import Evaluator
+import Evaluator
     
 # Create your views here.
 class JSONResponse(HttpResponse) :
