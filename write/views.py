@@ -6,10 +6,10 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 
 import sys
-from SentEvalAPI import Evaluator
 sentAPIPath = 'D:\\home\\site\\wwwroot\\write\\SentEvalAPI'
 if sentAPIPath not in sys.path:
     sys.path.append(sentAPIPath)
+from SentEvalAPI import Evaluator
     
 # Create your views here.
 class JSONResponse(HttpResponse) :
