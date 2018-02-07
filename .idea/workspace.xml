@@ -4,10 +4,6 @@
     <list default="true" id="918bcbd4-aa71-41b1-a943-96f94a92bcb2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write/SentEvalAPI/BasicOperator.py" afterPath="$PROJECT_DIR$/write/SentEvalAPI/BasicOperator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write/SentEvalAPI/Evaluator.py" afterPath="$PROJECT_DIR$/write/SentEvalAPI/Evaluator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write/SentEvalAPI/FakeHangeulGenerator.py" afterPath="$PROJECT_DIR$/write/SentEvalAPI/FakeHangeulGenerator.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write/SentEvalAPI/ModelTrainer.py" afterPath="$PROJECT_DIR$/write/SentEvalAPI/ModelTrainer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write/SentEvalAPI/VectorEmbedding.py" afterPath="$PROJECT_DIR$/write/SentEvalAPI/VectorEmbedding.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -62,10 +58,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1894" />
-    <option name="y" value="1" />
-    <option name="width" value="1921" />
-    <option name="height" value="1080" />
+    <option name="x" value="-1794" />
+    <option name="y" value="203" />
+    <option name="width" value="908" />
+    <option name="height" value="614" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -320,17 +316,24 @@
       <option name="project" value="LOCAL" />
       <updated>1517885329236</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add deploy file">
+      <created>1517968664988</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1517968664989</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1894" y="1" width="1921" height="1080" extended-state="0" />
+    <frame x="-1794" y="203" width="908" height="614" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20104986" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4293722" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32892057" sideWeight="0.5043057" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33436853" sideWeight="0.4956943" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.396" sideWeight="0.4956943" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38289204" sideWeight="0.49515608" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />

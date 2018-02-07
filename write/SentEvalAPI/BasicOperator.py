@@ -49,18 +49,18 @@ class BasicHangeulOperators:
         else:
             return False
 
-    def filterNotAllowedAlph(self, sent):
+    def filterNotAllowedAlph(self, sentence):
         # 문장 중에서 허가되지 않은 문자를 걸러냄
         new = ''
-        for alph in sent:
+        for alph in sentence:
             if self.allowedUniCheck(alph) == True:
                 new += alph
         return new
 
-    def processedSent(self, sent):
-        sent = self.filterNotAllowedAlph(sent)
-        sent = self.nonHangeulTagger(sent)
-        return sent
+    def processedSent(self, sentence):
+        sentence = self.filterNotAllowedAlph(sentence)
+        sentence = self.nonHangeulTagger(sentence)
+        return sentence
 
 class BasicOperators: # something frequently used.
     def reservoirSampling(items, k):
