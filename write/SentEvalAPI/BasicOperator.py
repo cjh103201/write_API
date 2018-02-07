@@ -4,16 +4,16 @@ class BasicHangeulOperators:
     def __init__(self):
         # 정규식을 사용해서 영어와 숫자를 하나의 태그로 만든다.
         # 한국어 문장에서 영어단어가 쓰이는 경우는 고유 명사, 이름, 예시가 대부분이므로 이렇게 해도 문법상 오류는 없을 것.
+        # 트랜잭션 순서대로 관리해주세영
         import re
         self.numRe = re.compile('[0-9]+')
         self.engRe = re.compile('[A-z]+')
+        self.funcTransac = [self.engRe, self.numRe]
+        self.varTransac = [chr(60982), chr(60983)]
 
     def nonHangeulTagger(self, sentence):
-        # 한글과 구두점 쉼표 외는 unknow으로 하거나 유니코드 사용자 정의 영역에 할당함. num->uEE00, eng->uEE01
-        # 트랜잭션 관리 잘해주세용
-        funcTransac = [self.engRe, self.numRe]
-        varTransac = [chr(60982), chr(60983)]
-        for regObj, var in zip(funcTransac, varTransac):
+        # 한글과 구두점 쉼표 외는 unknow으로 하거나 유니코드 사용자 정의 영역에 할당함. num->uEE00, eng->uEE01       
+        for regObj, var in zip(self.funcTransac, self.varTransac):
             sentence = regObj.sub(var, sentence)
         return sentence
 

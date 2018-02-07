@@ -96,8 +96,9 @@ class HangeulBiVector:
 
 class BiGramResrvoir:
     '''
-    말 그대로 바이그램 저수지입니다. 바이그램을 모아뒀다가 펑션콜이 들어올때마다 바이그램 셋을 반환해줍니다.
-    이제 벡터 임베딩만 빠르다면 앞으로 힘든것은 별로 없습니다. 
+    말 그대로 바이그램 저수지입니다. 한 에폭의 학습에 사용된 데이터를 모두 풀링합니다.
+    만약 데이터의 확률 분포에 변형을 가하는 등의 오퍼레이션이 필요하면 여기서 하시는게 좋습니다.
+    이 이후에는 정보를 잃습니다.
     '''
     def __init__(self):
         self.abnormVecGenerator = FakeHangeulGenerator.AbnormalPipeline()
@@ -112,8 +113,9 @@ class BiGramResrvoir:
         return  randVec, abnormalBi, ordinalBi
 
 class VectorFactory:
-    # 벡터콜이 들어오면 여기서 샘플링하고 돌려주기.
-    # 벡터콜이 들어오면 바이벡터와 
+    # 벡터를 달라고 하면 정해진 개수만큼 찍어냅니다.
+    # randomTruncatedSampling은 확률 분포를 그대로 따라서 샘플링을 하면
+    # 하위 단어를 거의 고려 못하기 때문에 일정 빈도 이상은 모두 같은 확률로 샘플링하는 방법입니다. 
     def __init__(self):
         self.biGramResrvoir = BiGramResrvoir()
         self.hanBiVecEmbed = HangeulBiVector()

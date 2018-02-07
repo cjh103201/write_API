@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="918bcbd4-aa71-41b1-a943-96f94a92bcb2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write/views.py" afterPath="$PROJECT_DIR$/write/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write/SentEvalAPI/BasicOperator.py" afterPath="$PROJECT_DIR$/write/SentEvalAPI/BasicOperator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write/SentEvalAPI/Evaluator.py" afterPath="$PROJECT_DIR$/write/SentEvalAPI/Evaluator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write/SentEvalAPI/FakeHangeulGenerator.py" afterPath="$PROJECT_DIR$/write/SentEvalAPI/FakeHangeulGenerator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write/SentEvalAPI/ModelTrainer.py" afterPath="$PROJECT_DIR$/write/SentEvalAPI/ModelTrainer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write/SentEvalAPI/VectorEmbedding.py" afterPath="$PROJECT_DIR$/write/SentEvalAPI/VectorEmbedding.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,20 +23,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/write/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="88" column="15" lean-forward="true" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -71,8 +62,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1826" />
-    <option name="y" value="67" />
+    <option name="x" value="-1894" />
+    <option name="y" value="1" />
     <option name="width" value="1921" />
     <option name="height" value="1080" />
   </component>
@@ -92,7 +83,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -115,6 +105,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -124,12 +115,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/write" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -322,11 +313,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517883543329</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add deploy file">
+      <created>1517885329236</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1517885329236</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1826" y="67" width="1921" height="1080" extended-state="0" />
+    <frame x="-1894" y="1" width="1921" height="1080" extended-state="0" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20104986" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -335,7 +333,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33436853" sideWeight="0.4956943" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38289204" sideWeight="0.49515608" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986877" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2827443" sideWeight="0.49349844" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -371,9 +369,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/write/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -381,9 +383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding>
-            <element signature="e#633#674#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -391,7 +390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="27" column="76" lean-forward="true" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -413,9 +411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="27" column="65" lean-forward="false" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -459,7 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -495,9 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding>
-            <element signature="e#633#674#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -505,7 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="76" lean-forward="false" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -526,10 +516,71 @@
     <entry file="file://$PROJECT_DIR$/write/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="88" column="15" lean-forward="true" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
+          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#C:/Users/MinseongKim/PycharmProjects/write_API/write/SentEvalAPI">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#C:/Users/MinseongKim/PycharmProjects/write_API/write/SentEvalAPI</OriginalElement>
+          <nodes>
+            <node x="" y="">write.SentEvalAPI.FakeHangeulGenerator.UniMutator</node>
+            <node x="" y="">write.SentEvalAPI.BiGramFrequency.FreqDistExtractor</node>
+            <node x="" y="">write.SentEvalAPI.DataPipeline.DataPipe</node>
+            <node x="" y="">write.SentEvalAPI.VectorEmbedding.VectorFactory</node>
+            <node x="" y="">write.SentEvalAPI.FakeHangeulGenerator.FreqDistribution</node>
+            <node x="" y="">write.SentEvalAPI.ModelTrainer.FreqDistribution</node>
+            <node x="" y="">write.SentEvalAPI.VectorEmbedding.FreqDistribution</node>
+            <node x="" y="">write.SentEvalAPI.BasicOperator.BasicOperators</node>
+            <node x="" y="">write.SentEvalAPI.BasicOperator.NGramVectorSeed</node>
+            <node x="" y="">write.SentEvalAPI.FakeHangeulGenerator.BiMutator</node>
+            <node x="" y="">write.SentEvalAPI.VectorEmbedding.HangeulUniVector</node>
+            <node x="" y="">write.SentEvalAPI.FakeHangeulGenerator.AbnormalPipeline</node>
+            <node x="" y="">write.SentEvalAPI.Parameters.Parameters</node>
+            <node x="" y="">write.SentEvalAPI.BasicOperator.BasicHangeulOperators</node>
+            <node x="" y="">write.SentEvalAPI.BiGramFrequency.FreqDistribution</node>
+            <node x="" y="">write.SentEvalAPI.FakeHangeulGenerator.RandomVector</node>
+            <node x="" y="">write.SentEvalAPI.ModelTrainer.SurfaceModel</node>
+            <node x="" y="">write.SentEvalAPI.VectorEmbedding.BiGramResrvoir</node>
+            <node x="" y="">write.SentEvalAPI.VectorEmbedding.HangeulBiVector</node>
+            <node x="" y="">write.SentEvalAPI.Evaluator.FreqDistribution</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8137931034482758" x="364.0" y="313.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/write/SentEvalAPI/Evaluator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://Python/#C:/Users/MinseongKim/PycharmProjects/write_API/write/views.py">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement>#C:/Users/MinseongKim/PycharmProjects/write_API/write/views.py</OriginalElement>
+          <nodes>
+            <node x="" y="">HttpResponse</node>
+            <node x="" y="">write.views.JSONResponse</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="86.0" y="55.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>

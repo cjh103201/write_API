@@ -20,11 +20,12 @@ class UniMutator:
     # 마찬가지로 ㅊ, ㅉ은 ㅈ으로 수렴하는 경향이 있다. 이런 규칙들을 찾아내면 각 음소 자질을 노드로 삼는
     # 마르코프 체인의 계를 만들 수 있고, 그 매트릭스를 구한다면 단어에 미묘한 오류를 추가하기가 매우 쉽고 빨라질것.
     # 이는 비문생성에서도 마찬가지일 것이라 생각함.
-    # 간단하게는 마르코프 체인이겠지만 뭐가 되었던 간에 비슷해 보이면서 말도 안되는, 오류가 남발하는 문장을
+    # 간단하게는 마르코프 체인이겠지만 뭐가 되었던 간에 비슷해 보이면서 오류가 남발하는 문장을
     # 대량으로 생성할 필요가 잇음.
         pass
 
     def glitch(self, numNeeded):
+        # 사용되지 않은 유니그램 중에서 numNeeded개를 뽑는다.
         wordSet = {ord(i) for i in self.validNGram.keys() if len(i) == 1}
         wordRange = set(range(44032,55203))
         wordRange = wordRange - wordSet
@@ -41,6 +42,11 @@ class UniMutator:
                 wordRange = set(range(44032,55203)) - wordSet
 
 class BiMutator:
+    '''
+    멀쩡한 바이그램을 받아서 여기에 적절한 변형을 줘서 틀린 바이그램을 만들어내는 메소드들의 집합.
+    지금은 글리치하는 것 밖에 없는데 위와 마찬가지로 인간과 유사하게 미묘한 변형을 줄 수 있는
+    함수를 고안하면 좋을듯.
+    '''
     def __init__(self, HanParams, validNGram):
         self.HanParams = HanParams
         self.validNGram = validNGram
@@ -88,6 +94,10 @@ class BiMutator:
             retList.append(mutatedBi)
 
 class RandomVector:
+    '''
+    아무 의미 없는 벡터를 출력합니다. 초중종성, 유니그램과 바이그램의 매칭등을 무시하고 정해진 개수만큼
+    벡터 위에 1을 넣습니다. 유니그램의 경우 3개, 바이그램은 음절당 하나씩 마킹 합니다.
+    '''
     def randomVector(self, numNeeded, dimBiVec = None, dimUniVec = None):
         retList = []
         for i in range(numNeeded):
@@ -100,6 +110,10 @@ class RandomVector:
         return retList 
 
 class AbnormalPipeline:
+    '''
+    이름이 조금 이상한데 데이터를 글리치한 것이나 랜덤으로 등록한 벡터 등등 우리가 가짜로 생성한 데이터를 공급해주는 곳입니다.
+    콜이 들어오면 미리 정한 비율에 따라서 벡터를 찍어냅니다.
+    '''
     def __init__(self):
         self.HanParams = Parameters('Hangeul').getDefaultParams
         path = self.HanParams['hangeulPicklePath']

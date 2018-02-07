@@ -9,7 +9,8 @@ class FreqDistribution:
 
 hanOp = BasicHangeulOperators()
 hanBi = HangeulBiVector()
-
+# 마지막 두 메소드를 제외하면 데이터 베이스안의 문장을 평가하기 위한 것 (정확도 평가)
+# 마지막 두 메소드
 def classifySentence(dataPipe):
     while True:
         try:
@@ -46,6 +47,7 @@ def getScore(uni1, uni2, bi):
     #     return 0
 
 def predBi(rate0, rate1, sess, model): 
+    
     vec0 = []
     vec1 = []
     truePos = 0 # 맞는 문장을 맞다고 했다.
@@ -60,9 +62,9 @@ def predBi(rate0, rate1, sess, model):
         seedSet = makeSeed(sent, 1)
         vec1.append(seedSet)
 
-    # import csv
-    # f = open('bringItHome.csv', 'w')
-    # csvw = csv.writer(f)
+    ## import csv
+    ## f = open('bringItHome.csv', 'w')
+    ## csvw = csv.writer(f)
     for seedSet in vec0:
         scoreStack = []
         for seed in seedSet:
@@ -72,8 +74,7 @@ def predBi(rate0, rate1, sess, model):
             model.uni_Y2:d, model.bi_X:e, model.bi_Y:f, model.prob:1}
             n,m,l = sess.run([model.model_uni1, model.model_uni2, model.model_bi], feed_dict = feedData)
             n,m,l = n[0][0],m[0][0],l[0][0]
-            # csvw.writerow([n,m,l,0])
-            # 여기서 그냥 nml 기록하면 문제인게 그럼 이게 어떻게 점수화가 된건지는 모르네.
+            ## csvw.writerow([n,m,l,0])
             scr = getScore(n,m,l)
             scoreStack.append(scr)
         scr = min(scoreStack)
@@ -91,7 +92,7 @@ def predBi(rate0, rate1, sess, model):
             model.uni_Y2:d, model.bi_X:e, model.bi_Y:f, model.prob:1}
             n,m,l = sess.run([model.model_uni1, model.model_uni2, model.model_bi], feed_dict = feedData)
             n,m,l = n[0][0],m[0][0],l[0][0]
-            # csvw.writerow([n,m,l,1])
+            ## csvw.writerow([n,m,l,1])
             scr = getScore(n,m,l)
             scoreStack.append(scr)
         scr = min(scoreStack)
@@ -133,8 +134,9 @@ def evaluateTestDB(path):
 def evaluateSentence(sess, model, sent):
     sent = hanOp.processedSent(sent)
     if len(sent) < 2:
-        raise ValueError
-    # print('biGram    Uni1P     Uni2P    BiP    Scr')
+        raise ValueError 
+        # 여기서 valueError 대신 유니그램 모델을 실행시키는 방법도 있음.
+        # 그러면 한글자도 평가가능하겠지만 한글자짜리 문장이 가치가 있을지는 모르겠음
     biSet = hanOp.nGramSlicer(sent, 2)
     biZip = zip(hanBi.biVectorEmbedding(biSet, 1), biSet)
     minScr = 9999

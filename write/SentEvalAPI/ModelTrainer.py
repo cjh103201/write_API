@@ -16,6 +16,13 @@ numUniNeurons = 64
 numBiNeurons = 128
 ###################
         
+'''
+모델은 유니그램을 판별하는 레이어 한장짜리 신경망, 바이그램을 판별하는 두장짜리 신경망으로 나뉨.
+유니그램의 출력값은 다시 바이그램으로 들어간다. 그래서 바이그램 신경망은 바이그램 벡터와 유니그램 출력값을 기반으로 학습.
+non-linear classification을 위한 activate function으로 relu 사용
+'''
+
+
 HanParams = Parameters('Hangeul').getDefaultParams
 dimUniVec = HanParams['dimUniVec']
 dimBiVec = HanParams['dimBiVec']
@@ -25,6 +32,7 @@ class FreqDistribution:
     pass # 피클파일 부르는 것 때문에 만든 abstract class입니다. 쓰지마세영
 
 def getData():
+    # 벡터 시드를 불러서 섞은 뒤에 돌려줍니다. 만약 추가적인 가공이 필요하면 여기 넣으시면 됩니다.
     dataSet = VectorFactory().trainVector()
     np.random.shuffle(dataSet)
     return dataSet
