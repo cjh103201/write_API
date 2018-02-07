@@ -19,7 +19,7 @@ class DataPipe:
 
     def lineChange(self):
         # 이 함수를 실행하면 데이터를 가져오던 라인을 바꿉니다. 여기서는 테이블이 바뀝니다.
-        # 만약 진행중인 작업을 모두 완료했다면 index error를 뱉습니다.
+        # 만약 진행중인 작업을 모두 완료했다면 StopIteration을 뱉습니다.
         try:
            self.currentLine, self.currentParams = next(self.zippedLine)
         except StopIteration:
@@ -57,7 +57,7 @@ class DataPipe:
         return self.pump(), self.currentLine
 
 if __name__ == '__main__':
-    pipe = DataPipe()
+    pipe = DataPipe('TrainDB')
     cnt = 0
     i, j = pipe.pumpData()
     for k in i:

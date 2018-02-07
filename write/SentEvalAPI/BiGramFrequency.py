@@ -108,6 +108,11 @@ class FreqDistribution:
         return self.__name
 
 def weightedMerge(freqDict):
+    '''
+    굳이 이 함수를 쓰는 이유는 우리가 중요하다고 생각함에도 데이터 수가 적어서 샘플링때 학습 데이터에
+    포함되지 않는 테이블이 존재할 수 있기 때문이다. 그런 빈도수 차이와 중요도 차이를 보정하기 위해
+    다음과 같은 과정을 거치는 것.
+    '''
     param = Parameters('Hangeul')
     mergedFreqDict = FreqDistribution('mergedFreqDict')
     zippedList = zip(param.paramNameList, param.paramInfoList)

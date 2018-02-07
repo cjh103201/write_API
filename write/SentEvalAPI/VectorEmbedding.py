@@ -8,6 +8,11 @@ from SentEvalAPI.BiGramFrequency import weightedMerge
 class FreqDistribution:
     pass # 피클파일 부르는 것 때문에 만든 abstract class입니다. 쓰지마세영
 
+
+'''
+벡터 임베딩이라 적어놨지만 사실은 벡터시드로 만드는 것입니다.
+벡터로 만들면 메모리가 많이 들기 때문에 그것은 마지막의 마지막까지 미뤄둡니다.
+'''
 HanParams = Parameters('Hangeul').getDefaultParams
 if HanParams['dimUniVec'] != 67+1+1:
     print('#####Dimesion of univector does not match.######')
@@ -98,7 +103,7 @@ class BiGramResrvoir:
     '''
     말 그대로 바이그램 저수지입니다. 한 에폭의 학습에 사용된 데이터를 모두 풀링합니다.
     만약 데이터의 확률 분포에 변형을 가하는 등의 오퍼레이션이 필요하면 여기서 하시는게 좋습니다.
-    이 이후에는 정보를 잃습니다.
+    이 이후에는 truncate과 dimBiVec의 제한으로 정보를 잃습니다.
     '''
     def __init__(self):
         self.abnormVecGenerator = FakeHangeulGenerator.AbnormalPipeline()
@@ -109,22 +114,25 @@ class BiGramResrvoir:
         randVec, glitchedBi = self.abnormVecGenerator.performAbnormals(int(abnormalRate*numNeeded))
         wrongAnswers = list(self.freqDict.dictByRate[0]['biFreqDict'].keys()) * HanParams['foreignWrongAns']
         ordinalBi = self.freqDict.dictByRate[1]['biFreqDict']
+        trainBi = BasicOperators.randomTruncatedSampling(ordinalBi, upperBound, numSamples)
         abnormalBi = glitchedBi + wrongAnswers
-        return  randVec, abnormalBi, ordinalBi
+        return randVec, abnormalBi, ordinalBi
 
 class VectorFactory:
-    # 벡터를 달라고 하면 정해진 개수만큼 찍어냅니다.
-    # randomTruncatedSampling은 확률 분포를 그대로 따라서 샘플링을 하면
-    # 하위 단어를 거의 고려 못하기 때문에 일정 빈도 이상은 모두 같은 확률로 샘플링하는 방법입니다. 
+    '''    
+    벡터를 달라고 하면 정해진 개수만큼 찍어냅니다.
+    randomTruncatedSampling은 확률 분포를 그대로 따라서 샘플링을 하면
+    하위 단어를 거의 고려 못하기 때문에 일정 빈도 이상은 모두 같은 확률로 샘플링하는 방법입니다.
+    ''' 
     def __init__(self):
         self.biGramResrvoir = BiGramResrvoir()
         self.hanBiVecEmbed = HangeulBiVector()
 
     def trainVector(self):
+        # 창의력이 떨어져서 더 이름을 못 짓겠는데 섞어서 벡터화만 하면 되는 학습셋을 돌려주는 역할입니다.
         upperBound = HanParams['truncSamplingParam']['upperBound']
         numSamples = HanParams['truncSamplingParam']['numSamples']
         randVec, abnormalBi, ordinalBi = self.biGramResrvoir.getDatas(numSamples)
-        trainBi = BasicOperators.randomTruncatedSampling(ordinalBi, upperBound, numSamples)
         retList = []
         retList.extend(self.hanBiVecEmbed.biVectorEmbedding(trainBi, 1))
         retList.extend(self.hanBiVecEmbed.biVectorEmbedding(abnormalBi, 0))

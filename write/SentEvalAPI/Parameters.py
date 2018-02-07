@@ -18,8 +18,8 @@ class Parameters:
         defaults.update(paramList[1])
         return defaults
 
-    def importFrom(self, module, name):
-        module = __import__(module, fromlist=[name])
+    def importFrom(self, moduleFolder, name):
+        module = __import__(moduleFolder, fromlist=[name])
         return getattr(module, name)
 
 if __name__ == '__main__':
